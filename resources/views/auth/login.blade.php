@@ -6,9 +6,8 @@
 
 @section('content')
     <section class="vh-100 background-radial-gradient overflow-hidden">
-        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
         <div class="container h-100 mt-2">
+            <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col col-xl-10">
                     <div class="card" style="border-radius: 1rem;">
@@ -61,7 +60,8 @@
                                         <div class="form-outline mb-4">
                                             <input type="password" id="password"
                                                 class="form-control form-control-lg @error('password') is-invalid @enderror"
-                                                value="{{ old('password') }}" name="password" autocomplete="password" autofocus />
+                                                value="{{ old('password') }}" name="password" autocomplete="password"
+                                                autofocus />
                                             <label class="form-label" for="password">Password</label>
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -114,16 +114,6 @@
         width: 220px;
         top: -60px;
         left: -130px;
-        background: radial-gradient(#44006b, #ad1fff);
-        overflow: hidden;
-    }
-
-    #radius-shape-2 {
-        border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-        bottom: -60px;
-        right: -110px;
-        width: 300px;
-        height: 300px;
         background: radial-gradient(#44006b, #ad1fff);
         overflow: hidden;
     }

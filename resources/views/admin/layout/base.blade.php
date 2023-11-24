@@ -95,10 +95,6 @@
     </script>
 </body>
 <footer class="main-footer">
-    <div class="float-right d-none d-sm-inline">
-        <span id="date"></span>
-        <span id="time"></span></span>
-    </div>
     <strong>Copyright &copy; 2023-2024 <a href="#" target="_blank">Travel and Tours</a>.</strong> All rights
     reserved.
 </footer>

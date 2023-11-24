@@ -95,4 +95,7 @@
             </div>
         </div>
     </div>
+    <p class="text-center"><a href="#" class="btn btn-secondary my-2 w-25" onclick="goBack()"><i
+        class="far fa-arrow-left"></i>
+    Back</a></p>
 @endsection

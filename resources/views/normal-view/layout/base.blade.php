@@ -41,11 +41,11 @@
             <div class="col-md-6">
                 <h5>Navigation</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white"><i class="far fa-earth-americas"></i> Travel and Tours</a>
+                    <li><a href="/travel-and-tours" class="text-white"><i class="far fa-earth-americas"></i> Travel and Tours</a>
                     </li>
-                    <li><a href="#" class="text-white"><i class="far fa-circle-info"></i> About Us</a></li>
-                    <li><a href="#" class="text-white"><i class="far fa-light fa-phone"></i> Contact Us</a></li>
-                    <li><a href="#" class="text-white"><i class="far fa-calendar-check"></i> My Bookings</a></li>
+                    <li><a href="/about-us" class="text-white"><i class="far fa-circle-info"></i> About Us</a></li>
+                    <li><a href="/contact-us" class="text-white"><i class="far fa-light fa-phone"></i> Contact Us</a></li>
+                    <li><a href="/bookings" class="text-white"><i class="far fa-calendar-check"></i> My Bookings</a></li>
                 </ul>
             </div>
             <div class="col-md-6">

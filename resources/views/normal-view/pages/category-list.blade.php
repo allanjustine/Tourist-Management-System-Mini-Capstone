@@ -75,7 +75,13 @@
                 @endforelse
             @else
                 <h1>No category found</h1>
+                <p class="text-center"><a href="#" class="btn btn-secondary my-2 w-25" onclick="goBack()"><i
+                            class="far fa-arrow-left"></i>
+                        Back</a></p>
             @endif
         </div>
+        <p class="text-center"><a href="#" class="btn btn-secondary my-2 w-25" onclick="goBack()"><i
+                    class="far fa-arrow-left"></i>
+                Back</a></p>
     </div>
 @endsection

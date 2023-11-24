@@ -76,6 +76,9 @@
                         @if ($category->posts->isNotEmpty())
                             <div class="col-md-4 mb-4">
                                 <div class="card">
+                                    <div class="card-content">
+                                        <h6><strong>{{ $category->remarks }}</strong></h6>
+                                    </div>
                                     @foreach ($category->posts as $post)
                                         @if (is_array($post->post_image))
                                             @foreach ($post->post_image as $index => $imagePath)
@@ -154,5 +157,39 @@ border-radius: 50% 50% 0 0;
 .category-list {
 overflow-y: scroll;
 scrollbar-width: thin;
+}
+.card {
+position: relative;
+width: 300px;
+height: 200px;
+background-color: #f0f0f0;
+border: 1px solid #ccc;
+border-radius: 8px;
+overflow: hidden;
+margin: 20px;
+transition: transform 0.3s;
+}
+
+.card-content {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: rgba(80, 220, 241, 0.8);
+color: #000000;
+opacity: 0;
+transform: translateY(100%);
+transition: opacity 0.3s, transform 0.3s;
+}
+
+.card:hover .card-content {
+opacity: 1;
+transform: translateY(0);
 }
 </style>

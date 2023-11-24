@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User @yield('title')</title>
+    <title>@auth
+            User
+        @else
+            Guest
+        @endauth @yield('title')</title>
     <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -37,7 +41,8 @@
             <div class="col-md-6">
                 <h5>Navigation</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white"><i class="far fa-earth-americas"></i> Travel and Tours</a></li>
+                    <li><a href="#" class="text-white"><i class="far fa-earth-americas"></i> Travel and Tours</a>
+                    </li>
                     <li><a href="#" class="text-white"><i class="far fa-circle-info"></i> About Us</a></li>
                     <li><a href="#" class="text-white"><i class="far fa-light fa-phone"></i> Contact Us</a></li>
                     <li><a href="#" class="text-white"><i class="far fa-calendar-check"></i> My Bookings</a></li>

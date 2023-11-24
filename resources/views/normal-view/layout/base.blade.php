@@ -35,7 +35,7 @@
     </script>
 </body>
 
-<footer class="footer bg-info text-white mt-auto py-3">
+<footer class="footer text-white mt-auto py-3" style="background: linear-gradient(to right, #1569ca, #7beafe);">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

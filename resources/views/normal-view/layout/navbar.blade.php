@@ -41,7 +41,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         @auth
-                            <li><a class="dropdown-item text-white" href="/profile"><i class="far fa-user"></i> Profile</a>
+                            <li><a class="dropdown-item text-white" href="#"><i class="far fa-user"></i> {{ auth()->user()->name }}</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">

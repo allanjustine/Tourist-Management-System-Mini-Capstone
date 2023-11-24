@@ -20,9 +20,9 @@
                     <h6 class="text-overflow m-0" style="text-align: left;">Welcome! {{ Auth::user()->name }}
                     </h6>
                 </div>
-                <a href="/admin/profile" class="dropdown-item">
+                <a href="#" class="dropdown-item">
                     <i class="fa fa-user mr-2"></i>
-                    <span>My profile</span>
+                    <span>{{ auth()->user()->name }}</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">

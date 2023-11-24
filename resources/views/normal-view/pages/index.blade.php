@@ -46,7 +46,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="bg-info text-white py-2">
+    <div class="text-white py-2" style="background: linear-gradient(to right, #1569ca, #7beafe);">
         <h3 class="text-center">Categories</h3>
         <div class="category-list">
             <nav class="navbar navbar-expand">

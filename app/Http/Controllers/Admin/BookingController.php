@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Events\UserLog;
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -65,5 +66,17 @@ class BookingController extends Controller
             ->get();
 
         return view('admin.bookings.searched', compact('bookings', 'search'));
+    }
+
+    public function createBooking()
+    {
+        $users = User::all();
+        return view('admin.bookings.create', compact('users'));
+    }
+
+    public function getRandomName()
+    {
+        $users = User::all()->pluck('name')->shuffle()->first();
+        return response()->json(['name' => $users]);
     }
 }

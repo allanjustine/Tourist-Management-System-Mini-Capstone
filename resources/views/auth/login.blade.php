@@ -19,7 +19,7 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
                                     @if (session('message'))
-                                        <div class="alert alert-success alert-dismissible fade show text-center"
+                                        <div class="alert alert-success alert-dismissible fade show text-center animated fadeIn"
                                             role="alert">
                                             {{ session('message') }}
                                             <button type="button" class="btn-close" data-bs-dismiss="alert"
@@ -27,7 +27,7 @@
                                         </div>
                                     @endif
                                     @if (session('error'))
-                                        <div class="alert alert-danger alert-dismissible fade show text-center"
+                                        <div class="alert alert-danger alert-dismissible fade show text-center animated fadeIn"
                                             role="alert">
                                             {{ session('error') }}
                                             <button type="button" class="btn-close" data-bs-dismiss="alert"
@@ -47,7 +47,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="email" id="email"
-                                                class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                                class="form-control form-control-lg @error('email') is-invalid animated tada @enderror"
                                                 value="{{ old('email') }}" name="email" autocomplete="email" autofocus />
                                             <label class="form-label" for="email">Email address</label>
                                             @error('email')
@@ -59,7 +59,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="password" id="password"
-                                                class="form-control form-control-lg @error('password') is-invalid @enderror"
+                                                class="form-control form-control-lg @error('password') is-invalid animated tada @enderror"
                                                 value="{{ old('password') }}" name="password" autocomplete="password"
                                                 autofocus />
                                             <label class="form-label" for="password">Password</label>

@@ -29,7 +29,7 @@
                             <div class="col-md-6 mb-4">
                                 <div class="md-form mb-0">
                                     <input type="text" id="name" name="name"
-                                        class="form-control @error('name') is-invalid @enderror"
+                                        class="form-control @error('name') is-invalid animated fadeIn @enderror"
                                         value="@auth {{ auth()->user()->name }} @else
                                             {{ old('name') }} @endauth"
                                         @auth readonly @endauth autocomplete="name" autofocus>
@@ -44,7 +44,7 @@
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <input type="text" id="email" name="email"
-                                        class="form-control @error('email') is-invalid @enderror"
+                                        class="form-control @error('email') is-invalid animated fadeIn @enderror"
                                         value=" @auth {{ auth()->user()->email }} @else
                                      {{ old('name') }} @endauth"
                                         autocomplete="email" @auth readonly @endauth autofocus>
@@ -62,7 +62,7 @@
                             <div class="col-md-12 mb-4">
                                 <div class="md-form">
                                     <textarea type="text" id="message" name="message" rows="5"
-                                        class="form-control @error('message') is-invalid @enderror" autocomplete="message" autofocus>{{ old('message') }}</textarea>
+                                        class="form-control @error('message') is-invalid animated fadeIn @enderror" autocomplete="message" autofocus>{{ old('message') }}</textarea>
                                     <label for="message">Your message</label>
                                     @error('message')
                                         <span class="invalid-feedback" role="alert">

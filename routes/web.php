@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Auth\AuthIndexController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\TestEnrollmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -77,12 +78,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/admin/posts/result/search', [PostController::class, 'searchPost'])->name('admin.posts.search');
 
         Route::get('/admin/bookings', [BookingController::class, 'index']);
-        Route::get('/admin/bookings/create', [BookingController::class, 'createBooking']);
+        Route::get('/admin/bookings/discount', [BookingController::class, 'createBooking']);
         Route::put('/admin/bookings/create', [BookingController::class, 'store'])->name('admin.bookings.create');
         Route::get('/admin/bookings/update/{booking}', [BookingController::class, 'updateBooking']);
         Route::put('/admin/bookings/update/{booking}', [BookingController::class, 'update'])->name('admin.bookings.update');
         Route::delete('/admin/bookings/{booking}', [BookingController::class, 'checkouted'])->name('admin.bookings.checkout');
         Route::get('/admin/bookings/result/search', [BookingController::class, 'searchBooking'])->name('admin.bookings.search');
+
+        Route::get('/get-random-name', [BookingController::class, 'getRandomName']);
     });
 
     //user permission route

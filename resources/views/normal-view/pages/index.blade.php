@@ -62,7 +62,7 @@
                 </div>
             </nav>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" data-aos="zoom-in-up">
             <div class="col-md-6">
                 <form class="form-inline" action="{{ route('travels.and.tours.search') }}" method="GET">
                     @csrf
@@ -85,7 +85,7 @@
             <div class="row">
                 @forelse ($categories as $category)
                     @if ($category->posts->isNotEmpty())
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-4 mb-4" data-aos="fade-up-left">
                             <div class="card">
                                 <div class="card-content">
                                     <h6><strong>{{ $category->remarks }}</strong></h6>

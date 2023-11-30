@@ -14,7 +14,7 @@
         @endif
         <h3>My bookings</h3>
         @forelse ($bookings as $booking)
-            <div class="card mb-2">
+            <div class="card mb-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
@@ -48,7 +48,8 @@
                                 </li>
                             </ul>
                             <a href="#" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#cancel{{ $booking->id }}"><i class="far fa-xmark-circle"></i> Cancel booking</a>
+                                data-bs-target="#cancel{{ $booking->id }}"><i class="far fa-xmark-circle"></i> Cancel
+                                booking</a>
                         </div>
                     </div>
                 </div>

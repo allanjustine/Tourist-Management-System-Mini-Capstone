@@ -24,9 +24,9 @@
         </div>
     @endif
     <div class="col-sm-12">
-        {{-- <a href="/admin/bookings/create" class="btn btn-primary mb-3 me-2 float-end">
-            <i class="fa-solid fa-plus"></i> Add Booking
-        </a> --}}
+        <a href="/admin/bookings/discount" class="btn btn-primary mb-3 me-2 float-end">
+            <i class="fa-solid fa-tags"></i> Discount picker
+        </a>
         <form action="{{ route('admin.bookings.search') }}" method="GET">
             @csrf
             <input type="search" name="search" class="form-control mb-3 mx-2 float-start" style="width: 198px;"

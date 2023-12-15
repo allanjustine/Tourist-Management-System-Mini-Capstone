@@ -17,6 +17,18 @@ class BookingController extends Controller
         return view('admin.bookings.index', compact('bookings'));
     }
 
+    public function confirmBooking(Booking $booking)
+    {
+        $booking->update([
+            'status'            =>          true
+        ]);
+
+        $log_entry = Auth::user()->name . " confirm " . $booking->user->name . " with the id# " . $booking->id;
+        event(new UserLog($log_entry));
+
+        return back()->with('message', 'Booking accepted');
+    }
+
     public function checkouted(Booking $booking)
     {
         $post = $booking->post;

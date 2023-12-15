@@ -47,7 +47,7 @@ class IndexController extends Controller
         ]);
         $booked = Booking::create([
             'post_id'       =>          $request->post_id,
-            'user_id'       =>          auth()->id(),
+            'user_id'       =>          auth()->id()
         ]);
 
         $post = $booked->post;

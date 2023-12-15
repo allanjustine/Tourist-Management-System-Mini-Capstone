@@ -47,9 +47,14 @@
                                 <li><strong>Price:</strong> &#8369;{{ number_format($booking->post->price, 2) }}/Room
                                 </li>
                             </ul>
+                            @if ($booking->status == true)
+                            <div class="a btn btn-success"><i class="far fa-check"></i> Accepted</div>
+                            @else
                             <a href="#" class="btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#cancel{{ $booking->id }}"><i class="far fa-xmark-circle"></i> Cancel
                                 booking</a>
+
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -66,8 +66,17 @@
                         <td>{{ $booking->post->contact }}</td>
                         <td>{{ $booking->post->person_quantity }}</td>
                         <td>
-                            <a href="#" class="btn btn-primary mb-1" data-bs-toggle="modal"
-                                data-bs-target="#checkout{{ $booking->id }}"><i class="far fa-check"></i> Checkout</a>
+                            <form action="{{ route('admin.confirm.booking', $booking->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                @if ($booking->status == false)
+                                    <button type="submit" class="btn btn-primary">Confirm</button>
+                                @else
+                                    <a href="#" class="btn btn-primary mb-1" data-bs-toggle="modal"
+                                        data-bs-target="#checkout{{ $booking->id }}"><i class="far fa-check"></i>
+                                        Checkout</a>
+                                @endif
+                            </form>
                         </td>
                     </tr>
                     @include('admin.bookings.delete')

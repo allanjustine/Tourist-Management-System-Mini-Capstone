@@ -118,7 +118,8 @@
                                 </p>
                             </div>
 
-                            <a href="/category/{{ $category->id }}" class="btn btn-primary align-self-end">See More
+                            <a href="/category/{{ $category->id }}" class="btn btn-primary align-self-end">See
+                                More
                                 <i class="far fa-arrow-right"></i></a>
                         </div>
                     </div>

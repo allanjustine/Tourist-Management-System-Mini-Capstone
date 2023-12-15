@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Auth\AuthIndexController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TestEnrollmentController;
@@ -78,6 +79,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/admin/posts/result/search', [PostController::class, 'searchPost'])->name('admin.posts.search');
 
         Route::get('/admin/bookings', [BookingController::class, 'index']);
+        Route::put('/admin/bookings/{booking}', [BookingController::class, 'confirmBooking'])->name('admin.confirm.booking');
         Route::get('/admin/bookings/discount', [BookingController::class, 'createBooking']);
         Route::put('/admin/bookings/create', [BookingController::class, 'store'])->name('admin.bookings.create');
         Route::get('/admin/bookings/update/{booking}', [BookingController::class, 'updateBooking']);
